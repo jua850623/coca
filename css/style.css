@@ -1,0 +1,320 @@
+@charset "uft-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{padding: 0; margin: 0; }
+li{list-style: none;}
+a{
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+    color: inherit;
+}
+div, ul{transition: .3s;}
+img{
+    display: block;
+}
+#wrap{padding-top: 140px;}
+
+.burger{width: 32px; height: 32px;
+        background:rgb(248, 248, 247) ;
+        position:fixed ;
+        left:34px; top: 34px;
+        z-index: 100;
+        display: none;
+    }
+
+.burger li{
+    height: 4px; background: #e4e2e2;
+    position: relative; opacity: 1;
+    transition: 0.3s;
+}
+.burger li:nth-child(2){top: 10px;}
+.burger li:nth-child(3){top: 6px;}
+.burger li:nth-child(4){top: 16px;}
+
+.burger.on li:nth-child(1){opacity: 0;}
+.burger.on li:nth-child(4){opacity: 0;}
+.burger.on li:nth-child(2){
+    transform: rotate(45deg);
+}
+.burger.on li:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.bur_gnb{
+    position: fixed;
+    left:-250px; top: 100px;
+    z-index: 102;
+    background: rgb(233, 231, 231);
+    width: 250px;
+    transition: .3s;
+    transition-delay: .3s;
+    
+}
+.bur_gnb a{
+    line-height: 40px;
+    padding:  10px 20px;
+    
+}
+.bur_gnb a:hover{
+    background: #bcbbbb;
+}
+.bur_gnb.on{
+    left: 0;
+}
+
+.bur_gnb_back{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left:0; top: 100px;
+    z-index: 101;
+    background: rgba(243, 242, 242,.5);
+    
+    transition: .2s;
+    display: none;
+}
+.bur_gnb_back.on{
+    display: block;
+}
+.bur_gnb.list{display: flex;}
+
+
+.refresh{
+   position: sticky;
+   top: 80vh;
+   margin-left: 90vw;
+   z-index: 10;
+ 
+   display: none;
+   
+}
+
+.refresh.on{display: block;}
+.refresh i{
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 3px 3px 3px #7a7878;
+}
+#header{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 140px;
+    background: #fff;
+    box-shadow: 0 0 3px #333;
+    z-index: 10;
+    transition: .3s;
+}
+#header.on{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+#header.on .gnb{width: 60vw;}
+#header.on .logo img{height: 40px;}
+
+.logo{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobilelogo{
+    display: none;
+}
+.gnb{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+.gnb a{
+    /* line-height: 40px; */
+    border-bottom: 1px #fff solid;
+   
+}
+.gnb a:hover{
+    border-bottom: 3px red solid;
+}
+#wrap section{position: relative;}
+#section1{
+    height: calc(100vh - 140px);
+    background: url("../imgs/230404_코카콜라_뉴진스2_\(NDH\)-1440x900.jpg") 50% 50% / cover;
+}
+#section1 .text{
+    width: 30%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+.text h3{
+ 
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    text-shadow: 3px 3px 3px #333;
+}
+.view{display: flex; color: #fff; text-shadow: 2px 2px 3px #333;}
+
+.next{padding-left: 10px; transition: .6s;}
+.text p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    color: #fff;
+    text-shadow: 3px 3px 3px #333;
+}
+.view:hover .next{padding-left: 20px;}
+#section2{
+    height: calc(100vh - 140px);
+    background: url("../imgs/02_Header\ Image\ 02-\(D\)-1440x900.png") 50% 50% /cover;
+
+}
+#section2 .text{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+#section3{
+    height: calc(100vh - 140px);
+    background: url("../imgs/coca-cola-bottles-\(DH\)-1440x900.png") 50% 50% /cover;
+}
+#section3 .text{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: #333;
+}
+#section3 h3{color: #000; text-shadow: 3px 3px 3px #858383;}
+#section3 p{color: #000; text-shadow: 3px 3px 3px #858383;}
+
+#section4{
+    height: calc(100vh - 140px);
+    background: url("../imgs/04_Header\ Image\ 04-\(D\)-1440x900.png") 50% 50% / cover;
+}
+#section4 .text{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+#section5{
+    height: calc(100vh - 140px);
+    background: url("../imgs/05_Header\ Image\ 05-\(D\)-1440x900.png") 50% 50% / cover;
+}
+#section5 .text{
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+
+#footer{
+    width: 100%;
+    height: 200px;
+    background: #646464;
+    display: flex;
+    color: #fff;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+.menu{width: 500px;}
+.menu a{ display: inline-block;}
+.site{display: flex; height: 72.5px; width: 500px;
+    justify-content: space-between; }
+.site img{width: 42px; height: 42px;}
+.menu li{line-height: 72.5px; display: flex; justify-content: space-between;
+    text-align: right;}
+
+    
+/* .f_left{width: 30%; padding-top: 40px; padding-left: 10px;}
+.f_logo img{
+   height: 80px;
+   
+   }
+
+.copy{
+    line-height: 40px;
+    font-size: 20px;
+}
+.f_right{
+     width: 70%; padding: 15px;
+     box-sizing: border-box;
+     }
+    
+.menu li{
+    display: flex; 
+    justify-content: space-evenly;
+    line-height: 85px;
+    text-align: right;
+    padding: 0 25%;
+    
+    
+    
+}
+.menu a{display: inline-block; }
+.site{
+    height: 85px;
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    
+    box-sizing: border-box;
+    padding-top: 15px;
+    /* margin: 0 100px;
+    margin-left: 100px; */
+    /* margin: 0 60px 0 160px; */
+   
+
+/* .site img{
+    width: 42px;
+    height: 42px;
+}
+.site a:hover img{
+    opacity: .5;
+} 
+ */
+
+
+ /* ---------------반응형 max-width:800px--------------- */
+ @media screen and (max-width:800px) {
+    .pclogo{display: none;}
+    .mobilelogo{display: block;}
+    nav{display: none;}
+    #header{height: 100px;}
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .text{width:80%;}
+    #footer{display: block;}
+    .menu{text-align: center;}
+
+    #section1{
+      
+        background: url("../imgs/NewJeans-Zero\(NMH\)-767x1360.jpg") 50% 50% / cover;
+    }
+    #section2{
+        height: calc(100vh - 140px);
+        background: url("../imgs/02_Header\ Image\ 02-\(M\)-767x1360.png") 50% 50% /cover;
+    
+    }
+    #section3{
+        
+        background: url("../imgs/coca-cola-bottles-\(MH\)-767x1360.png") 50% 50% /cover;
+    }
+    #section4{
+        
+        background: url("../imgs/04_Header\ Image\ 04-\(M\)-767x1360.png") 50% 50% / cover;
+    }
+    #section5{
+        
+        background: url("../imgs/05_Header\ Image\ 05-\(M\)-767x1360.png") 50% 50% / cover;
+    }
+
+
+ }
